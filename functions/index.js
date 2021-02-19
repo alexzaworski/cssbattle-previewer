@@ -15,11 +15,11 @@ exports.preview = functions
       args: chromium.args,
       defaultViewport: { width: 400, height: 300 },
       executablePath: await chromium.executablePath,
-      headless: true
+      headless: true,
     });
 
     const {
-      query: { q = "" }
+      query: { q = "" },
     } = req;
 
     const page = await browser.newPage();
